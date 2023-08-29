@@ -10,7 +10,7 @@ services:
       MYSQL_HOST: mysql
       MYSQL_USER: root
       MYSQL_PASSWORD: root
-      MYSQL_DB: cooldb
+      MYSQL_DB: two_tier
     depends_on:
       - mysql
 
@@ -18,7 +18,7 @@ services:
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: cooldb
+      MYSQL_DATABASE: two_tier
       MYSQL_USER: root
       MYSQL_PASSWORD: root
     volumes:
