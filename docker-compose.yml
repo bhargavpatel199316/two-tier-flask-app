@@ -8,8 +8,8 @@ services:
       - "5000:5000"
     environment:
       MYSQL_HOST: mysql
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_USER: devops
+      MYSQL_PASSWORD: devops
       MYSQL_DB: two_tier
     depends_on:
       - mysql
@@ -19,8 +19,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: two_tier
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_USER: devops
+      MYSQL_PASSWORD: devops
     volumes:
       - ./message.sql:/docker-entrypoint-initdb.d/message.sql   # Mount sql script into container's /docker-entrypoint-initdb.d directory
       - mysql-data:/var/lib/mysql  # Mount the volume for MySQL data storage
